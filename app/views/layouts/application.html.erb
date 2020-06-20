@@ -12,21 +12,16 @@
   <body class="sb-nav-fixed">
   
     <!--    Navbar  -->
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-      <%= render 'layouts/top_nav_bar' %>
-    </nav>
+    <%= render 'layouts/top_nav_bar' %>
     <!--    content  -->
     <div id="layoutSidenav">
       <!--    side Navbar  -->
-      <div id="layoutSidenav_nav">
-        <%= render 'layouts/side_nav' %>
-      </div>
+      <%= render 'layouts/side_nav' %>
       <!--    content  -->
       <div id="layoutSidenav_content">
         <main>
           <div class="container-fluid">
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
+            <%= render 'layouts/messages'%>
             <%= yield %>
           </div>
         </main>
@@ -34,5 +29,7 @@
       <!--    end content  -->
     </div>
     <!--    end content  -->
+    <%= render 'layouts/footer' %>
+    <%= javascript_pack_tag 'global' %>
   </body>
 </html>

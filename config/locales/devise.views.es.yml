@@ -145,3 +145,10 @@ es:
       not_saved:
         one: 'Ocurrió un error al tratar de guardar %{resource}:'
         other: 'Ocurrieron %{count} errores al tratar de guardar %{resource}:'
+    models:
+      user:
+        attributes:
+          current_password: 
+            blank: 'Contraseña actual incorrecta'
+          email:
+            blank: "Correo incorrecto"

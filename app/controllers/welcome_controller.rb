@@ -2,7 +2,6 @@ class WelcomeController < ApplicationController
   before_action :set_user, only: [:index]
 
   def index
-    flash[:notice] = "Bienvenido #{@user.email}."
   end
 
   private 

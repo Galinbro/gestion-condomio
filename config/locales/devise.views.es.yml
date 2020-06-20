@@ -152,3 +152,7 @@ es:
             blank: 'Contraseña actual incorrecta'
           email:
             blank: "Correo incorrecto"
+          firstname:
+            blank: "Nombre no puede estar en blanco"
+          lastname:
+            blank: "Apellido no puede estar en blanco"

@@ -16,7 +16,9 @@
     <!--    content  -->
     <div id="layoutSidenav">
       <!--    side Navbar  -->
-      <%= render 'layouts/side_nav' %>
+      <% if user_signed_in? %>
+        <%= render 'layouts/side_nav' %>
+      <%end %>
       <!--    content  -->
       <div id="layoutSidenav_content">
         <main>

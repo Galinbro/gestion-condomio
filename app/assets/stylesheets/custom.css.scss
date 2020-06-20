@@ -1,7 +1,9 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 
-
+#sticky-footer {
+  flex-shrink: none;
+}
 /*     css              */
 :root {
   --blue: #007bff;

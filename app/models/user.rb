@@ -15,6 +15,13 @@ class User < ApplicationRecord
     "Anonimo"
   end
 
+  def admin?
+    if role_id == 3
+      return true
+    end
+    return false
+  end
+  
   private
   def set_default_role
     self.role ||= Role.find_by_name('inquilino')

@@ -29,8 +29,8 @@
               <td><%=user.role.name%></td>
               <% if current_user.admin? %>
                 <td>
-                  <%= link_to "Editar", edit_role_path(user), class: "btn btn-outline-primary" %>
-                  <%= link_to "Borrar", edit_role_path(user), class: "btn btn-danger-primary" %>
+                  <%= link_to "Editar", edit_user_path(user), class: "btn btn-outline-primary" %>
+                  <%= link_to "Borrar", edit_user_path(user), class: "btn btn-outline-danger" %>
                 </td>
               <% end %>
             </tr>

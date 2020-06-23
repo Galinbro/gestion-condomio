@@ -5,6 +5,21 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params_create)
+    if @user.save
+      flash[:notice] = "Usuario creado exitosamente"
+      redirect_to users_path
+    else
+      flash[:alert] = "Hubo un error, intente nuevamente."
+      render 'new'
+    end
+  end
+  
   def edit
   end
   
@@ -33,6 +48,10 @@ class UsersController < ApplicationController
   private 
   def user_params
     params.require(:user).permit(:firstname, :lastname, :email, :role_id)
+  end
+  
+  def user_params_create
+    params.require(:user).permit(:firstname, :lastname, :email, :role_id, :password, :password_confirmation)
   end
 
   def set_user
